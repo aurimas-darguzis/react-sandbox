@@ -7,7 +7,7 @@ import Spinner from './features/Spinner';
 
 const useStyles = makeStyles(() => ({
   divider: {
-    marginTop: '50px3'
+    marginTop: '50px'
   }
 }));
 

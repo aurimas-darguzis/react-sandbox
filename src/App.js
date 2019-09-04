@@ -1,13 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {
-  Notification,
-  showNotification
-} from './features/Notification/Notification';
-import { Button } from '@material-ui/core';
+import { Notification, showNotification } from './features/Notification/';
+import { Button, makeStyles } from '@material-ui/core';
+import Spinner from './features/Spinner';
+
+const useStyles = makeStyles(() => ({
+  divider: {
+    marginTop: '50px3'
+  }
+}));
 
 function App() {
+  const classes = useStyles();
+
   const openSnackbar = () => {
     showNotification({ message: 'pizza', variant: 'success' });
     // showNotification({ message: 'water', variant: 'info' });
@@ -27,6 +33,8 @@ function App() {
           snack
         </Button>
         <Notification />
+        <div className={classes.divider}></div>
+        <Spinner />
       </header>
     </div>
   );

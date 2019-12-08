@@ -4,7 +4,7 @@ import "./App.css";
 import { Notification, showNotification } from "./features/Notification/";
 import { Button, makeStyles } from "@material-ui/core";
 import Spinner from "./features/Spinner";
-import { Hackernews } from "./features/Hackernews/";
+import { Hackernews } from "./features/Hackernews";
 
 const useStyles = makeStyles(() => ({
   divider: {

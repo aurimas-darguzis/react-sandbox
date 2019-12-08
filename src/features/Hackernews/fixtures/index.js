@@ -1,8 +1,8 @@
 export const singularStory = {
-  by: "Kyle Simpson",
+  by: "Karl Hadwen",
   id: 1,
   time: 1454343578,
-  title: "Functional Javascript",
+  title: "Tarnished: Google Responds",
   url: "https://somebook.com"
 };
 

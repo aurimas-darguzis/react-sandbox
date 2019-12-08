@@ -1,13 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Notification, showNotification } from './features/Notification/';
-import { Button, makeStyles } from '@material-ui/core';
-import Spinner from './features/Spinner';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Notification, showNotification } from "./features/Notification/";
+import { Button, makeStyles } from "@material-ui/core";
+import Spinner from "./features/Spinner";
+import { Hackernews } from "./features/Hackernews/";
 
 const useStyles = makeStyles(() => ({
   divider: {
-    marginTop: '50px'
+    marginTop: "50px"
   }
 }));
 
@@ -15,19 +16,20 @@ function App() {
   const classes = useStyles();
 
   const openSnackbar = () => {
-    showNotification({ message: 'pizza', variant: 'success' });
+    showNotification({ message: "pizza", variant: "success" });
     // showNotification({ message: 'water', variant: 'info' });
     // showNotification({ message: 'banana', variant: 'warning' });
     // showNotification({ message: 'tomato', variant: 'error' });
   };
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <Hackernews />
         <Button
-          variant='contained'
-          color='secondary'
+          variant="contained"
+          color="secondary"
           onClick={() => openSnackbar()}
         >
           snack
